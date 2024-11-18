@@ -1,0 +1,128 @@
+/* Scene Base Styles */
+.scene-wrapper {
+  @apply relative w-full h-[300px] overflow-hidden;
+  background: transparent;
+}
+
+/* Hills Animation */
+.hill {
+  animation: sway 6s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+}
+
+/* Trees Animation */
+.left-tree {
+  animation: treeWave 3s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes treeWave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+
+/* Water Animation */
+.water-wrap {
+  animation: waterFlow 8s linear infinite;
+}
+
+@keyframes waterFlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Fish Animation */
+.fish-wrap {
+  animation: fishSwim 10s linear infinite;
+}
+
+@keyframes fishSwim {
+  0% { transform: translateX(-100%) translateY(0); }
+  25% { transform: translateX(0%) translateY(-20px); }
+  50% { transform: translateX(100%) translateY(0); }
+  75% { transform: translateX(0%) translateY(20px); }
+  100% { transform: translateX(-100%) translateY(0); }
+}
+
+/* Birds Animation */
+.bird-wrapper {
+  animation: birdFly 4s ease-in-out infinite;
+}
+
+.bird-wrapper.snd {
+  animation-delay: -1s;
+}
+
+.bird-wrapper.trd {
+  animation-delay: -2s;
+}
+
+@keyframes birdFly {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(20px); }
+}
+
+/* Sun Animation */
+.sun span {
+  animation: sunPulse 4s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+/* Cloud Animations */
+.cloud-left,
+.cloud-middle,
+.cloud-right {
+  animation: cloudDrift 8s linear infinite;
+}
+
+.cloud-middle {
+  animation-delay: -2s;
+}
+
+.cloud-right {
+  animation-delay: -4s;
+}
+
+@keyframes cloudDrift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+/* Ship Animation */
+.ship {
+  animation: shipRock 3s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes shipRock {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg) translateY(-5px); }
+  75% { transform: rotate(5deg) translateY(5px); }
+}
+
+/* Water Lines Animation */
+.water-lines span {
+  animation: waterRipple 3s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.water-lines span:nth-child(2) {
+  animation-delay: -1s;
+}
+
+.water-lines span:nth-child(3) {
+  animation-delay: -2s;
+}
+
+@keyframes waterRipple {
+  0%, 100% { transform: scaleX(1) translateX(0); opacity: 0.6; }
+  50% { transform: scaleX(1.2) translateX(10px); opacity: 0.8; }
+}

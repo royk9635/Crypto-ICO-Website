@@ -1,0 +1,111 @@
+/* Floating Orbs Animation */
+.floating-orb {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-orb.purple {
+  animation-delay: -3s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -20px); }
+}
+
+/* Floating Particles Animation */
+.particle {
+  animation: particleFloat 8s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  25% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { transform: translateY(-100px) translateX(50px); opacity: 0; }
+}
+
+/* Timeline Line Glow */
+.timeline-line {
+  overflow: hidden;
+}
+
+@keyframes timeline-glow {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-timeline-glow {
+  animation: timeline-glow 3s linear infinite;
+}
+
+/* Node Glow Effects */
+.shadow-glow {
+  box-shadow: 0 0 30px rgba(147, 51, 234, 0.3);
+  animation: nodePulse 4s ease-in-out infinite;
+}
+
+@keyframes nodePulse {
+  0%, 100% { box-shadow: 0 0 30px rgba(147, 51, 234, 0.3); }
+  50% { box-shadow: 0 0 50px rgba(147, 51, 234, 0.5); }
+}
+
+/* Card Glow Effects */
+.card-glow {
+  box-shadow: 0 0 50px rgba(147, 51, 234, 0.1);
+  transition: all 0.5s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 80px rgba(147, 51, 234, 0.2);
+}
+
+/* Text Glow Effects */
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.title-glow {
+  text-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+}
+
+.icon-glow {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+/* Item Glow */
+.item-glow:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Badge Effects */
+.quarter-badge, .status-badge {
+  transition: all 0.3s ease;
+}
+
+.quarter-badge:hover, .status-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.3);
+}
+
+/* Gradient Border */
+.border-gradient {
+  position: relative;
+  background: linear-gradient(to right, rgba(147, 51, 234, 0.5), rgba(56, 189, 248, 0.5));
+  background-clip: padding-box;
+}
+
+/* Slower Pulse Animation */
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Radial Gradient */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 100%);
+}
